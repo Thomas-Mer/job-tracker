@@ -1,3 +1,17 @@
+# Job Application Tracker
+
+Live: https://friendly-muffin-7b24ef.netlify.app/ 
+Repo: https://github.com/Thomas-Mer/job-tracker
+
+## Features
+- Add / update / delete applications
+- localStorage persistence
+
+## Tech
+React, Vite, localStorage, CSS, Netlify
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
