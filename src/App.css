@@ -1,0 +1,201 @@
+:root {
+  --bg: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+  --border: #e5e7eb;
+  --field: #cbd5e1;
+  --primary: #0f172a;
+  --primaryHover: #020617;
+  --danger: #dc2626;
+  --dangerHover: #b91c1c;
+  --card: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+.jt {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 56px 20px;
+}
+
+.jtHeader {
+  margin-bottom: 18px;
+}
+
+.jtHeader h1 {
+  margin: 0 0 6px;
+  font-size: clamp(1.9rem, 3.2vw, 2.5rem);
+  letter-spacing: -0.02em;
+}
+
+.jtHeader p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.jtCard {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  background: var(--card);
+  margin-top: 16px;
+}
+
+.jtCardTitle {
+  margin: 0 0 12px;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+}
+
+.jtForm {
+  display: grid;
+  grid-template-columns: 1.2fr 1.2fr 1fr auto;
+  gap: 12px;
+}
+
+.jtForm input,
+.jtForm select {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--field);
+  font: inherit;
+  background: #fff;
+}
+
+.jtForm input:focus,
+.jtForm select:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.jtForm button {
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--primary);
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.jtForm button:hover {
+  background: var(--primaryHover);
+  border-color: var(--primaryHover);
+}
+
+.jtRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.jtGhost {
+  padding: 8px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--field);
+  background: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.jtGhost:hover {
+  background: rgba(15, 23, 42, 0.04);
+}
+
+.jtEmpty {
+  color: var(--muted);
+  margin: 0;
+  padding: 10px 0 2px;
+}
+
+.jtList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.jtItem {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 12px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: #fff;
+}
+
+.jtItemMain strong {
+  font-size: 1rem;
+}
+
+.jtMuted {
+  color: var(--muted);
+  margin-left: 6px;
+}
+
+.jtItemActions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.jtItemActions select {
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: 1px solid var(--field);
+  background: #fff;
+}
+
+.jtDanger {
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: 1px solid var(--danger);
+  background: var(--danger);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.jtDanger:hover {
+  background: var(--dangerHover);
+  border-color: var(--dangerHover);
+}
+
+@media (max-width: 840px) {
+  .jtForm {
+    grid-template-columns: 1fr;
+  }
+  .jtItem {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .jtItemActions {
+    justify-content: flex-end;
+  }
+}
+
+/* Ensure select text is always visible */
+.jtForm select,
+.jtItemActions select,
+.jtForm input {
+  color: var(--text);
+}
+
+.jtForm select option,
+.jtItemActions select option {
+  color: var(--text);
+}
